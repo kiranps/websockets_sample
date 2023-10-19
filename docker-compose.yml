@@ -1,0 +1,17 @@
+version: "3"
+services:
+  sample_socket_io:
+    build: .
+    command: npm start
+    volumes:
+      - .:/app
+    environment:
+      - PORT=3000
+
+  nginx:
+    image: nginx:latest
+    container_name: my-nginx
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./nginx-config:/etc/nginx/conf.d

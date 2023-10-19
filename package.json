@@ -1,0 +1,16 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "PORT=3001 pm2 start app.js -f ; PORT=3002 pm2 start app.js -f"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^2.5.0",
+    "socket.io-client": "^2.5.0"
+  }
+}
